@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type="Car__c" name="car" access="public" />
+    <aura:attribute type="String" name="recordError" access="private" />
+    <aura:attribute type="Id" name="Id" access="public" default="a080o00002wlUZxAAM" />
+   
+    
+    <aura:handler event="c:CarSelectedApplicationEvent" action="{!c.onCarSelected}" />
+    
+    <!-- Here we are using Lightning Data Service to fetch the record
+		* recordUpdate="{!c.onRecordUpdate}" is optional
+		and is used only if you want to fire an event on update
+		* Mode can be either EDIT or VIEW -->
+    <force:recordData aura:id="service"
+                      recordId = "{!v.Id}"
+                      mode = "VIEW"
+                      targetFields = "{!v.car}"
+                      targetError = "{!v.recordError}"
+                      fields = "Id, Name, Milage__c, Per_Day_Rent__c, Build_Year__c, Contact__r.Name,
+                                Contact__r.Email,Contact__r.HomePhone,CarType__r.Name, Picture__c" />
+    
+         <lightning:layout multipleRows="true">
+        	<lightning:layoutItem size="12"
+                                  smallDeviceSize="12"
+                                  mediumDeviceSize="12"
+                                  largeDeviceSize="12">
+                <aura:if isTrue="{! !empty(v.car)}" >
+                	<lightning:tabset aura:id="tabs">
+                    	<lightning:tab label="Details" id="cardetailtab">
+                            <c:carDetails carDetails="{!v.car}" />
+                        </lightning:tab>
+                        <lightning:tab label="Add Car Experience" id="addexptab">
+                            <c:addCarExperience attrCarAddExp= "{!v.car}" />
+                        </lightning:tab>
+                    </lightning:tabset>
+                </aura:if>
+                       
+            </lightning:layoutItem>
+         </lightning:layout>
+</aura:component>

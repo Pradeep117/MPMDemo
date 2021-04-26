@@ -1,0 +1,4 @@
+.THIS .lbl_class label {
+    /* to hide the label of the input:select in DOM */
+    display:none;
+}

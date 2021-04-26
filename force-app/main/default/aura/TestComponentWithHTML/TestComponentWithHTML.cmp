@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<div class="SLDS-Card">
+    	<p class="para">Hello World in Salesforce</p>
+    	<div>
+            <h1>
+        	<p class="para1">This text is a paragraph inside the div</p>
+            </h1>
+    	</div>
+    	<div>
+        	<div>
+            	<p class="para2">This text is a text two level down</p>
+        	</div>
+    	</div>
+    	<p><lightning:formattedText value="I like salesforce.com and info.salesforce.com" /></p>
+    </div>
+</aura:component>

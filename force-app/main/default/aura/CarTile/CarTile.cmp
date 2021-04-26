@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+   
+    <aura:attribute name="attCar" type="sObject" access="public"
+                    default="{
+                             'sObjectType' : 'Car__c',
+                             'Name' : 'Pradeep',
+                             'Picture__c' : '/resource/CarImages/luxury/ford_mustang.jpeg',
+                            }"/>
+    <aura:attribute name="selectedCar" type="boolean" default="false" access="public" />
+    <aura:registerEvent name="onCarSelect" type="c:carSelect" />
+    
+    <button class="{! v.selectedCar ? 'selected tile' : 'tile'}" onclick="{!c.onCarClick}">
+        <div style="{# 'background-image:url('+v.attCar.Picture__c+')'}" class="innertile">
+            <div class="lower-third">
+                <!--  <h1 class="slds-truncate">{!v.attCar.Name}</h1>-->
+                <h1 class="slds-truncate">{!v.attCar.Contact__r.Name}</h1> 
+            </div>
+        </div>
+    </button>
+   <!-- <button class="slds-m-around_small" >
+        <div><h2 class="slds-text-heading_medium slds-align_absolute-center slds-text-color_success" style="font-weight : bold;text-transform:uppercase;"> Car Tile component</h2></div>
+    		<div class="tile" style="border:2px solid grey;padding : 4px;">  
+        		<div class="innertile" style="{# 'background-image : url('+v.attCar.Picture__c+')'}">
+            		<div class="lower-third">
+                		<h1 class="slds-truncate slds-text-heading_medium">Mustang(Hard coded value)</h1>
+            		</div>   
+        		</div>
+    		</div> 
+    </button> -->
+    
+    
+    <!-- <lightning:button variant="neutral" class="tile" label="Car Tile component">
+        <div  class="innertile">
+           
+      <div class="lower-third">
+             <h1 class="slds-truncate">{!v.attCar.Contact__r.Name}</h1>
+            </div>
+        </div>  
+       
+ </lightning:button>  -->
+    
+    
+</aura:component>

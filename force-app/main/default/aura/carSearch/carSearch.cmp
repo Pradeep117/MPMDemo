@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+  	<!-- handler for EventSearchCarFormSubmit Event -->
+    <aura:handler name="searchCarFormSubmit" event="c:EventSearchCarFormSubmit" action="{!c.doSearchCarFormSubmit}" />
+    
+    <!-- Top Car Search component -->
+    <lightning:card title="Search Your Car" class="bottom_margin">
+        <c:SearchCarForm/>
+    </lightning:card>
+    <!-- carSearchResult component which has carTile component as child -->
+    <lightning:card title="Matching Cars" class="bottom_margin">
+        <c:CarSearchResult aura:id="carSearchResult"/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <outboundMessages>
+        <fullName>EmailChange</fullName>
+        <apiVersion>48.0</apiVersion>
+        <endpointUrl>http://intg-playground.herokuapp.com/sfdc/omlistener/endpoint/dec0a904-fc6c-4956-8598-39100106cc47</endpointUrl>
+        <fields>Email</fields>
+        <fields>FirstName</fields>
+        <fields>Id</fields>
+        <fields>LastName</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>pradeep117@salesforce.com</integrationUser>
+        <name>EmailChange</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>EmailChange</fullName>
+        <actions>
+            <name>EmailChange</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <description>out bound call when email is changed</description>
+        <formula>ISCHANGED(Email)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

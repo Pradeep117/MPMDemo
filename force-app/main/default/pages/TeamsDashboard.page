@@ -1,0 +1,5 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Salesforce Dashboard</h1>
+  <apex:iframe src="https://pradeepdevorg-dev-ed.my.salesforce.com/servlet/servlet.ChartServer?rsid=0FL0o000003aXSF&ruid=00590000002cjl8&did=01Z0o000000qvdd&s=7&fs=10&tfg=12&tfs=-16777216&explode=0&c=column&cs=0&title=&eh=no&compo=yes&fg=-16777216&bg1=-1&bg2=-1&bgdir=2&dl1=Close+Date&dl2=&l=2&sax=yes&Yman=no&nc=0&actUrl=%2F00O0o00000BjTwA&sd=1&scv=yes&sct=no&spt=no&bd=yes&cu=USD&ab=X&u=0&vt=0&ab2=Y&u2=0&vt2=0&vl0=Record+Count&spoc=no&topn=no&gc0=-1&gc1=-1&gc2=-1&sona=0&rco=DASHBOARD_VIEW&rid=00O0o00000BjTwA&refreshts=1592993660000" height="500"/>
+</apex:page>

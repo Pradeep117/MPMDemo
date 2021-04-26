@@ -1,0 +1,34 @@
+<aura:component controller="carTypeSearch" extends="c:carTypeManager" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="buttonLabel" type="String" default="Search" />
+    <aura:attribute name="newLabel" type="String" default="New" />
+    <aura:attribute name="showNew" type="Boolean" default="false" />
+    
+    <!-- Event registration -->
+    <aura:registerEvent name="searchCarFormSubmit" type="c:EventSearchCarFormSubmit" />
+    
+  <!-- Day 3  <aura:attribute name="lstCarType" type="String[]" default="Sports Car,Luxuary Car,Van" /> -->
+    <aura:attribute name="lstCarType" type="CarType__c[]" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <!--  <aura:handler name="render" value="{!this}" action="{!c.handleRender}" />-->
+    
+    <lightning:layout horizontalAlign="center" >
+        <Lightning:layoutItem>
+            <lightning:select name="selectItem" aura:id="carTypeList" onchange="{!c.carTypeOnChange}" label="All Types" variant="label-hidden" value="">
+                <option value="" text="All Car Types"></option>
+                <aura:iteration items="{!v.lstCarType}" var="dyamicCarTypes">
+                    <option value="{!dyamicCarTypes.Id}" text="{!dyamicCarTypes.Name}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </Lightning:layoutItem>
+    
+        <lightning:layoutItem padding="around-medium">
+            <lightning:button label="{!v.buttonLabel}" onclick="{!c.searchOnClick}" variant="brand"/>
+            
+            <aura:if isTrue="{!v.showNew}">
+            <lightning:button label="{#v.newLabel}" variant="neutral" onclick="{!c.createCarTypeRecord}"/>
+            </aura:if>
+        </lightning:layoutItem>
+        
+     </lightning:layout>    
+</aura:component>

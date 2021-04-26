@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>pradeep117@yahoo.com</contactEmail>
+    <label>DevOps_Demo</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDmTCCAoECFEosO44BQmJNI11PcEb06PQO5y9HMA0GCSqGSIb3DQEBCwUAMIGIMQswCQYDVQQGEwJJTjEPMA0GA1UECAwGS2VyYWxhMQ4wDAYDVQQHDAVLb2NoaTEPMA0GA1UECgwGU3V5YXRpMRMwEQYDVQQLDApTYWxlc2ZvcmNlMQ8wDQYDVQQDDAZTdXlhdGkxITAfBgkqhkiG9w0BCQEWEmFiaGkuZGRyQGdtYWlsLmNvbTAeFw0yMDA2MDgwNzM5MTZaFw0yMTA2MDgwNzM5MTZaMIGIMQswCQYDVQQGEwJJTjEPMA0GA1UECAwGS2VyYWxhMQ4wDAYDVQQHDAVLb2NoaTEPMA0GA1UECgwGU3V5YXRpMRMwEQYDVQQLDApTYWxlc2ZvcmNlMQ8wDQYDVQQDDAZTdXlhdGkxITAfBgkqhkiG9w0BCQEWEmFiaGkuZGRyQGdtYWlsLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALEBfiVDrZW60Nw7qwmt54wvPlyKNFSeLnWA8jVqjabYrS3j5f62vD1R1+pG6pwqABdYuQxxXN3TAt+XAIW2gdOKANoMlO1Uvyy7xYfSj6yKtM2LXGDiemf9mBjdRna7Pxgr2dUkNkbzB8bef8ThrogJR6ivnhuuU7QxUyWMTOg0dskntBLp41RNHhf+K4a9gTu8gcxpFEPIYZczg7jwNczlQyC/mUE1SWXHiVi31qxZtKeFK9uqm+TfDfsXJfE9g+Ns67jmD7OQ+0FrcUgMP3bCDwtsNJkLa28wnsK7RKErMKQ5XSRbgFCraodQPd/gswxsWXZ3gqJH6EOiKVksznUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAp4i1FjB5EbCBnJA5x30OVQBqVGIQdDZTuqwUv3aTPdt9kBccBNPMgxrb/EYfGF73+rvkla2adQKMZLbZTMu+RLweOuZGwS385iK1O+5zOkj1gBpVBu4EMhbXEbd0T5NPwsowV5nqakP8pqdFAXCJdBa1malH4zcYrR43x2nRwh4O73Ejp1YN+ZLF4irRNw3lIyxv4tJ1a7U0Vhg+6rDPow9pkchUkS1QI0GI2qk760nc8cYtHrE1a24oRgRX1vnFEtjAeuFbHkkwUEIIE71cnC9bNSCvtdN5mvH5owjQQMRTCO5nz5HZp7h8wJcrljzJzMLAgD7S+ZCDiMKyvsMPUw==</certificate>
+        <consumerKey>3MVG9Y6d_Btp4xp67KvKfS9QoHBDFDxzXRvvFKK.Nm6ExHShCXAzVURR7dVu5coO0yFoCKP9wz0smwJs5vgbV</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

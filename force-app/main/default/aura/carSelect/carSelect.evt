@@ -1,0 +1,12 @@
+<!-- This event will fire by carTile component
+    to notify the parent component carSearchResult about
+    car selection change.
+    
+    ** carSearchResult component will handle the event
+    ** The event carId attribute to be passed which
+    can be used by parent component to identify 
+    the current selection
+-->
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute type="Id" name="carId" />
+</aura:event>
